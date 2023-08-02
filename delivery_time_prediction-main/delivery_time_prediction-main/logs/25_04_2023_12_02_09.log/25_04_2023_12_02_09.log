@@ -1,0 +1,36 @@
+[ 2023-04-25 12:02:10,226 ] 28 root - INFO - Data Ingestion Method starts
+[ 2023-04-25 12:02:10,330 ] 31 root - INFO - Dataset read as pandas Dataframe
+[ 2023-04-25 12:02:10,330 ] 33 root - INFO - Process started of converting Longititude and Latitude into displacement of source and destination
+[ 2023-04-25 12:02:24,616 ] 47 root - INFO - Process ended of converting Longititude and Latitude into displacement of source and destination
+[ 2023-04-25 12:02:24,616 ] 51 root - INFO - Dropping unecessary data
+[ 2023-04-25 12:02:24,659 ] 67 root - INFO - Data frame: 
+   Delivery_person_Age  Delivery_person_Ratings Weather_conditions Road_traffic_density  Vehicle_condition Type_of_order Type_of_vehicle  multiple_deliveries Festival           City  Time_taken (min)  Displacement
+0                 36.0                      4.2                Fog                  Jam                  2         Snack      motorcycle                  3.0       No  Metropolitian                46     10.280596
+1                 21.0                      4.7             Stormy                 High                  1          Meal      motorcycle                  1.0       No  Metropolitian                23      6.242327
+2                 23.0                      4.7         Sandstorms               Medium                  1        Drinks         scooter                  1.0       No  Metropolitian                21     13.787879
+3                 34.0                      4.3         Sandstorms                  Low                  0        Buffet      motorcycle                  0.0       No  Metropolitian                20      2.930262
+4                 24.0                      4.7                Fog                  Jam                  1         Snack         scooter                  1.0       No  Metropolitian                41     19.396645
+[ 2023-04-25 12:02:24,895 ] 72 root - INFO - Train test split
+[ 2023-04-25 12:02:25,118 ] 78 root - INFO - Ingestion of Data is completed
+[ 2023-04-25 12:02:25,120 ] 70 root - INFO - Data transformation initiated
+[ 2023-04-25 12:02:25,187 ] 74 root - INFO - Read the train and test data
+[ 2023-04-25 12:02:25,191 ] 75 root - INFO - Train Dataframe head: 
+   Delivery_person_Age  Delivery_person_Ratings Weather_conditions Road_traffic_density  Vehicle_condition Type_of_order   Type_of_vehicle  multiple_deliveries Festival           City  Time_taken (min)  Displacement
+0                 35.0                      4.6              Windy               Medium                  1        Drinks           scooter                  1.0       No  Metropolitian                26     11.007750
+1                 38.0                      4.7         Sandstorms                 High                  2        Buffet        motorcycle                  1.0       No  Metropolitian                29      6.037124
+2                 36.0                      4.8             Stormy                  Low                  2        Drinks  electric_scooter                  0.0       No          Urban                17     19.976055
+3                 27.0                      5.0             Stormy               Medium                  2        Drinks        motorcycle                  0.0       No  Metropolitian                24      6.051117
+4                 38.0                      4.7             Cloudy                  Jam                  0         Snack        motorcycle                  1.0       No  Metropolitian                46     13.622130
+[ 2023-04-25 12:02:25,194 ] 76 root - INFO - Test Dataframe head: 
+   Delivery_person_Age  Delivery_person_Ratings Weather_conditions Road_traffic_density  Vehicle_condition Type_of_order Type_of_vehicle  multiple_deliveries Festival           City  Time_taken (min)  Displacement
+0                 32.0                      4.1         Sandstorms               Medium                  0         Snack      motorcycle                  1.0       No  Metropolitian                33      7.490197
+1                 32.0                      4.9              Windy                  Low                  1         Snack      motorcycle                  1.0       No  Metropolitian                28      1.554502
+2                 23.0                      4.5              Sunny                  Jam                  2         Snack         scooter                  1.0       No  Metropolitian                22     11.007750
+3                 22.0                      4.5             Stormy                  Low                  0         Snack      motorcycle                  1.0       No  Metropolitian                25      4.468419
+4                 29.0                      4.9             Cloudy                  Jam                  0        Drinks      motorcycle                  1.0       No  Metropolitian                35     20.206929
+[ 2023-04-25 12:02:25,194 ] 78 root - INFO - Getting processing object
+[ 2023-04-25 12:02:25,194 ] 29 root - INFO - Data Transformation Initiated
+[ 2023-04-25 12:02:25,280 ] 102 root - INFO - Data transformation completed
+[ 2023-04-25 12:02:25,282 ] 26 root - INFO - Splitting dependent and independent varible
+[ 2023-04-25 12:02:27,620 ] 44 root - INFO - Model Report: {'LinearRegression': 0.42809401360306143, 'Lasso': 0.3590692058866002, 'Ridge': 0.4280937763409218, 'ElasticNet': 0.34721001529312423}
+[ 2023-04-25 12:02:27,622 ] 53 root - INFO - Best Model is LinearRegression() with r2_score of 0.42809401360306143
